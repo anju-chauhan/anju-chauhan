@@ -10,6 +10,8 @@ import {FormBuilder, Validator, Validators} from "@angular/forms";
 export class AppComponent {
   loginForm: any;
   inputList: any=[]
+  date = new Date();
+
   constructor(private fb: FormBuilder) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.email, Validators.required]],
@@ -18,6 +20,8 @@ export class AppComponent {
       lastName: ['', Validators.required],
       dob: ['', Validators.required],
     })
+
+
 
   }
 
@@ -31,7 +35,6 @@ submitForm(){
   }
 
 }
-
 
 
 }
